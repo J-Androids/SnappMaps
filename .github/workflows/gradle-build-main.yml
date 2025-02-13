@@ -43,15 +43,15 @@ jobs:
         name: app-release.apk
         path: app/build/outputs/apk/release/app-release.apk
 
-    # Create draft release
-    - name: Create Draft Release
-      id: create_release
-      uses: actions/create-release@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        generate_notes: true
-        draft: false
+    # # Create draft release
+    # - name: Create Draft Release
+    #   id: create_release
+    #   uses: actions/create-release@v2
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   with:
+    #     generate_notes: true
+    #     draft: false
 
     # Upload APK to release
     - name: Upload APK to Release
